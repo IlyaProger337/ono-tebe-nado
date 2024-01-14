@@ -5,23 +5,24 @@
     grid-template-columns: 1fr min-content 1fr;
     margin-top: 94px;
     margin-bottom: 94px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 /* 94 */
 .body {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 .header__adress {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: 49px;
     color: #000;
     font-family: Raleway, Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: 24.3px;
+    justify-self: flex-end;
     /* 135% */
 
 }
@@ -30,7 +31,6 @@
 .header__links-list {
     display: flex;
     flex-direction: row;
-    margin-left: 51px;
     list-style: circle;
 }
 
@@ -45,7 +45,7 @@
     text-decoration-line: underline;
 }
 
-.header__links-list-item:first-child {
+.header__links-list-item-active {
     list-style: none;
     text-decoration-line: none;
 }
@@ -75,8 +75,6 @@
 /* //////////////////////////// */
 .cover {
     max-width: 1440px;
-    max-height: 757px;
-    height: 100%;
     flex-shrink: 0;
     background-image: url('../images/cover.jpg');
     background-size: cover;
@@ -125,46 +123,30 @@
 }
 .aligned-text:first-child {
     margin-left: 50px;
+    margin-right: 50px;
 }
 
 .aligned-text_center {
-    color: #FFF;
-    text-align: center;
-    font-family: Raleway, Arial, Helvetica, sans-serif;
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 700;
     line-height: 100%;
+    text-align: center;
     /* 100px */
-    letter-spacing: 30px;
-    text-transform: uppercase;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .aligned-text_right {
-    color: #FFF;
     text-align: right;
-    font-family: Raleway, Arial, Helvetica, sans-serif;
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 700;
     line-height: 100%;
     /* 100px */
-    letter-spacing: 30px;
-    text-transform: uppercase;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .no-letter-spacing {
     letter-spacing: 0;
 }
 
 .letter-spacing-extended {
-    color: #FFF;
-    font-family: Raleway, Arial, Helvetica, sans-serif;
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 115%;
     letter-spacing: 60px;
-    text-transform: uppercase;
 }
 .cover__description {
     display: grid;
@@ -173,7 +155,6 @@
     /* Будет создано 3 ряда */
     grid-template-rows: auto;
     z-index: 1;
-    margin-top: 147px;
     margin-bottom: 62px;
     grid-template-areas:
         '. cover__description-text bet-button'
@@ -185,6 +166,7 @@
     font-family: Raleway, Arial, Helvetica, sans-serif;
     font-size: 22px;
     font-style: normal;
+    margin-top: 147px;
     font-weight: 400;
     line-height: 28px;
     /* 127.273% */
@@ -196,6 +178,7 @@
 
 .bet-button {
     grid-area: bet-button;
+    margin-top: 134px;
     color: #FFF;
     font-family: Raleway, Arial, Helvetica, sans-serif;
     font-size: 22px;
@@ -216,7 +199,7 @@
     max-width: 1440px;
     margin-top: 180px;
 }
-.overlay__cards {
+/* .overlay__cards {
     background: black;
     opacity: 0.6;
     position: absolute;
@@ -225,7 +208,7 @@
     height: 450px;
     top: 1304;
     left: 50;
-}
+} */
 
 .lots__heading {
     color: #000;
@@ -244,7 +227,6 @@
     flex-direction: row;
     margin-left: 50px;
     /* height: 450px; */
-    margin-bottom: 30px;
     flex-wrap: wrap;
 }
 
@@ -310,12 +292,15 @@
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
+    position: relative;
     z-index: 1;
     justify-content: space-between;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    max-width: 430px;
+    min-height: 450px;
 }
 
 .card_type_book {
@@ -362,6 +347,7 @@
     flex-direction: row;
     margin-top: 182px;
     margin-left: 145px;
+    margin-right: 50px;
 }
 
 
@@ -401,7 +387,7 @@
 
 .about__text {
     max-width: 885px;
-    height: 96px;
+    width: 100%;
     flex-shrink: 0;
     color: #000;
     font-family: Raleway, Arial, Helvetica, sans-serif;
@@ -421,11 +407,13 @@
 
 .footer {
     max-width: 1440px;
+    width: 96%;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
     margin-top: 180px;
     margin-bottom: 90px;
     margin-left: 50px;
+    margin-right: 50px;
 }
 
 /* .footer__adress {
@@ -441,14 +429,11 @@
     line-height: 24.3px;
 } */
 
-.footer_menu {
-    margin-left: 356px;
-}
+
 .footer__menu-list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    margin-right: 355px;
     max-width: 149px;
     width: 100%;
 }
@@ -465,11 +450,7 @@
 
 }
 
-.footer__menu-list-item--2 {
-    max-width: 149px;
-    width: 100%;
-    
-}
+
 
 .footer__menu-link {
     text-decoration: underline;
