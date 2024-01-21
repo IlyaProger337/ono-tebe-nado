@@ -13,7 +13,7 @@
     max-width: 1440px;
     margin: 0 auto;
 }
-.adress {
+.adress__nav {
     display: flex;
     flex-direction: column;
     color: #000;
@@ -221,7 +221,6 @@
 .lots__card-list {
     display: flex;
     flex-direction: row;
-    margin-left: 50px;
     /* height: 450px; */
     flex-wrap: wrap;
     margin-left: 50px;
