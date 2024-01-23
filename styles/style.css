@@ -75,7 +75,7 @@
 /* //////////////////////////// */
 .cover {
     max-width: 1440px;
-    max-height: 757px;
+    min-height: 757px;
     flex-shrink: 0;
     background-image: url('../images/cover.jpg');
     background-size: cover;
@@ -147,11 +147,11 @@
 .cover__description {
     display: grid;
     /* Будет создано 3 колонки */
-    grid-template-columns: 422px min-content 385px;
+    grid-template-columns: 1fr min-content;
+    column-gap: 78px;
     /* Будет создано 3 ряда */
     grid-template-rows: auto;
     z-index: 1;
-    margin-bottom: 62px;
     grid-template-areas:
         '. cover__description-text bet-button'
 }
@@ -264,7 +264,6 @@
     display: flex;
     z-index: 1;
     width: 350px;
-    max-height: 80px;
 }
 
 .card__text {
